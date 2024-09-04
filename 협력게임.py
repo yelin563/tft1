@@ -217,8 +217,7 @@ col1, col2,col3 = st.columns([2,2,3])
 
 
 with col1:
-    n1 = st.number_input(st.markdown("**항상협력자**를 몇 명으로 설정할까요?", unsafe_allow_html=True),
-                     placeholder="명 수를 작성하세요.", 
+    n1 = st.number_input(st.markdown("**항상협력자**를 몇 명으로 설정할까요?", unsafe_allow_html=True),placeholder="명 수를 작성하세요.", 
                      min_value=0, max_value=50, 
                      step=1, value=0)
     n2 = st.number_input("따라쟁이를 몇 명으로 설정할까요?",placeholder="명 수를 작성하세요.", min_value=0, max_value=50, step=1, value=0)
