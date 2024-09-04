@@ -199,6 +199,7 @@ def tournament(lst1,lst2):
         #st.session_state['name']=num
 c1, c2= st.columns([1,4])
 with c1:
+    st.write("")
     st.subheader("수락중 공존의 교육")
 with c2:
     st.title("협력게임")
