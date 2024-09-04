@@ -197,7 +197,11 @@ def tournament(lst1,lst2):
     #num=st.text_input('학번이름을 입력해주세요')
     #if num:
         #st.session_state['name']=num
-st.title("수락중 공존의 교육, 협력 게임")
+c1, c2= st.columns([1,5])
+with c1:
+    st.subheader("수락중 공존의 교육")
+with c2:
+    st.title("협력게임")
 st.write(r'''<span style="font-size: 20px;">$\textsf{[학습목표] 협력 게임의 전략을 선택해보고 어떤 전략이 가장 점수가 높을 확률이 큰지 알아보자.}$</span>''', unsafe_allow_html=True)
 
 
