@@ -197,7 +197,7 @@ def tournament(lst1,lst2):
     #num=st.text_input('학번이름을 입력해주세요')
     #if num:
         #st.session_state['name']=num
-c1, c2= st.columns([1,5])
+c1, c2= st.columns([1,4])
 with c1:
     st.subheader("수락중 공존의 교육")
 with c2:
