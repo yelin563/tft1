@@ -219,8 +219,8 @@ with col1:
     #n7 = st.number_input("배신한 원한을 가진 자를 몇 명으로 설정할까요?",placeholder="명 수를 작성하세요.", min_value=0, max_value=50, step=1, value=0)
     n4 = st.number_input("항상배신자를 몇 명으로 설정할까요?",placeholder="명 수를 작성하세요.", min_value=0, max_value=50, step=1, value=0)
     n5 = st.number_input("랜덤을 몇 명으로 설정할까요?",placeholder="명 수를 작성하세요.", min_value=0, max_value=50, step=1, value=0)
-    gn= st.number_input("한 상대와 몇 라운드를 진행할까요?",placeholder="라운드 수를 작성하세요.", min_value=5, max_value=50, step=1, value=5)
-    
+    #gn= st.number_input("한 상대와 몇 라운드를 진행할까요?",placeholder="라운드 수를 작성하세요.", min_value=5, max_value=50, step=1, value=5)
+gn=10   
 b1= st.button('결과 확인하기')
 
 if b1:
