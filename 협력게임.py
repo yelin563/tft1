@@ -90,17 +90,7 @@ def hatred(p1,p2,i):
         p1[i]=0
     return p1[i] # Return The Next Action of the player.
 
-def Suspicious_hatred(p1,p2,i):
-    # p1 : The Player 1  Actions.
-    # p2 : The Player 2  Actions.
-    if(i == 0):
-        p1[i] = 1 
-    else:
-      if sum(p2)>0:
-        p1[i] = 1
-      else:
-        p1[i]=0
-    return p1[i] # Return The Next Action of the player.
+
 
 def calc_payoffs(p1,p2,payoff_matrix): # function to  calculate the payoffs
     fit1 = 0
@@ -134,8 +124,8 @@ def IPDGame(Strategy1,Strategy2,p1,p2,k):
             p1[i] = hatred(p1,p2,i)
         if(Strategy1 == 'Naive Prober'):
             p1[i] = Naive_Prober(p1,p2,i)
-        if(Strategy1 == '배신한 원한을 가진 자'):
-            p1[i] = Suspicious_hatred(p1,p2,i)
+        #if(Strategy1 == '배신한 원한을 가진 자'):
+            #p1[i] = Suspicious_hatred(p1,p2,i)
         if(Strategy2 == '항상협력자'):
             p2[i] = Always_COO(p2,i)
         if(Strategy2 == '항상배신자'):
@@ -150,8 +140,8 @@ def IPDGame(Strategy1,Strategy2,p1,p2,k):
             p2[i] = Random(p2,i)
         if(Strategy2 == '원한을 가진 자'):
             p2[i] = hatred(p2,p1,i)
-        if(Strategy2 == '배신한 원한을 가진 자'):
-            p2[i] = Suspicious_hatred(p2,p1,i)
+        #if(Strategy2 == '배신한 원한을 가진 자'):
+            #p2[i] = Suspicious_hatred(p2,p1,i)
 
         if(Strategy2 == 'Naive Prober'):
             p2[i] = Naive_Prober(p2,p1,i)
@@ -226,7 +216,7 @@ with col1:
     n2 = st.number_input("따라쟁이를 몇 명으로 설정할까요?",placeholder="명 수를 작성하세요.", min_value=0, max_value=50, step=1, value=0)
     n6 = st.number_input("배신한 따라쟁이를 몇 명으로 설정할까요?",placeholder="명 수를 작성하세요.", min_value=0, max_value=50, step=1, value=0)
     n3 = st.number_input("원한을 가진 자를 몇 명으로 설정할까요?",placeholder="명 수를 작성하세요.", min_value=0, max_value=50, step=1, value=0)
-    n7 = st.number_input("배신한 원한을 가진 자를 몇 명으로 설정할까요?",placeholder="명 수를 작성하세요.", min_value=0, max_value=50, step=1, value=0)
+    #n7 = st.number_input("배신한 원한을 가진 자를 몇 명으로 설정할까요?",placeholder="명 수를 작성하세요.", min_value=0, max_value=50, step=1, value=0)
     n4 = st.number_input("항상배신자를 몇 명으로 설정할까요?",placeholder="명 수를 작성하세요.", min_value=0, max_value=50, step=1, value=0)
     n5 = st.number_input("랜덤을 몇 명으로 설정할까요?",placeholder="명 수를 작성하세요.", min_value=0, max_value=50, step=1, value=0)
     gn= st.number_input("한 상대와 몇 라운드를 진행할까요?",placeholder="라운드 수를 작성하세요.", min_value=5, max_value=50, step=1, value=5)
@@ -263,9 +253,9 @@ if b1:
     if n6>0:
         lst1.append(n6)
         lst2.append('배신한 따라쟁이')
-    if n7>0:
-        lst1.append(n7)
-        lst2.append('배신한 원한을 가진 자')
+    #if n7>0:
+        #lst1.append(n7)
+        #lst2.append('배신한 원한을 가진 자')
         
     if len(lst1) > 1:
         # Run the tournament and update cumulative results
